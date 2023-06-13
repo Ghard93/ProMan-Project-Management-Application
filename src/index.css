@@ -1,0 +1,480 @@
+body {
+  margin: 0;
+}
+
+#logoutBtn {
+  display: none;
+}
+
+#userName {
+  display: none;
+}
+
+#projectsLink {
+  display: none;
+  padding-top: 8px;
+  margin-left: 10px;
+}
+
+#newProjectWindow {
+  display: none;
+  flex-direction: column;
+  background-color: white;
+  position: absolute;
+  z-index: 1;
+  box-shadow: 2px 2px 5px 3px rgba(67, 67, 67, 0.25);
+  width: 250px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+}
+
+.newProjectTitle {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: larger;
+  margin: 0;
+}
+
+#deleteConfirmWindow {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background-color: white;
+  position: absolute;
+  z-index: 1;
+  box-shadow: 2px 2px 5px 3px rgba(67, 67, 67, 0.25);
+  width: 250px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+}
+
+#AddTaskWindow {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  box-shadow: 2px 2px 5px 3px rgba(67, 67, 67, 0.25);
+  width: 300px;
+  background-color: white;
+  padding: 10px;
+}
+
+#UpdateTaskWindow {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  box-shadow: 2px 2px 5px 3px rgba(67, 67, 67, 0.25);
+  width: 300px;
+  background-color: white;
+  padding: 10px;
+}
+
+input {
+  margin-top: 5px;
+}
+
+.notesInput {
+  height: 60px;
+  resize: none;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: medium;
+}
+
+#projectNameBtn {
+  border-style: none;
+  font-size: 32px;
+  background-color: white;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: bold;
+}
+
+#projectNameBtn:hover {
+  background-color: rgb(184, 184, 184);
+}
+
+.projectNameDiv {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+#updateProjectName {
+  display: none;
+  flex-direction: row;
+  gap: 5px;
+}
+
+.navBar {
+  background-color: rgb(33, 33, 33);
+}
+
+.navBarContainer {
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.navBarList {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+.appTitle {
+  text-decoration: none;
+  color: rgb(223, 223, 223);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.userNavContainer {
+  margin-left: auto;
+  display: flex;
+  flex-direction: row;
+  padding-top: 8px;
+}
+
+#userName {
+  text-decoration: none;
+  color: rgb(223, 223, 223);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: large;
+}
+
+.logoutBtn {
+  text-decoration: none;
+  color: rgb(223, 223, 223);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: large;
+  margin-left: 15px;
+}
+
+.newProjectBtn {
+  margin-left: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-style: none;
+  background-color: dodgerblue;
+  padding: 5px;
+  font-size: larger;
+  color: rgb(247, 247, 247);
+  cursor: pointer;
+}
+
+.projectsListContainer {
+  width: 95%;
+  margin: 0 auto;
+}
+
+.projectCard {
+  box-shadow: 2px 2px 5px 3px rgba(67, 67, 67, 0.25);
+  width: 260px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.projectListTitle {
+  margin-top: 10px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: large;
+}
+
+.projectListDiv {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.projectBtnRow {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.LoginTitle {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: large;
+  margin: 10px;
+}
+
+.loginDivContainer {
+  box-shadow: 2px 2px 5px 3px rgba(67, 67, 67, 0.25);
+  width: 20%;
+  margin: 0 auto;
+  margin-top: 50px;
+  padding: 10px;
+}
+
+.loginDiv {
+  width: 20%;
+  margin: 0 auto;
+}
+
+.loginInputDiv {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+label {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: large;
+  margin-right: 5px;
+}
+
+.bucketsContainer {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.taskBucketDiv {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+
+.bucketDiv {
+  width: 300px;
+}
+
+.bucketTitle {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 28px;
+  margin-bottom: 10px;
+  margin-top: 15px;
+  font-weight: normal;
+}
+
+.taskCard {
+  box-shadow: 2px 2px 5px 3px rgba(67, 67, 67, 0.25);
+  width: 300px;
+  margin-top: 20px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.addTaskBtn {
+  border-style: none;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: rgb(247, 247, 247);
+  background-color: dodgerblue;
+  font-size: larger;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.taskTitle {
+  margin: 0;
+  margin-top: 5px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 20px;
+  text-align: center;
+}
+
+.taskDueDate {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+
+.taskDetailsBackground {
+  border: solid 1px rgb(185, 185, 185);
+  background-color: rgb(236, 236, 236);
+  border-radius: 3px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.statusDiv {
+  display: flex;
+  flex-direction: row;
+}
+
+.taskStatus {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 15px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 10px;
+}
+
+.changeStatusWindow {
+  display: none;
+  flex-direction: column;
+  gap: 3px;
+  margin-top: 3px;
+}
+
+.changeStatusBtn {
+  border-style: none;
+  padding: 5px;
+  color: rgb(247, 247, 247);
+  background-color: dodgerblue;
+  border-radius: 3px;
+  margin-left: auto;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.closeChangeStatusBtn {
+  display: none;
+  border-style: none;
+  padding: 5px;
+  color: rgb(247, 247, 247);
+  background-color: dodgerblue;
+  border-radius: 3px;
+  margin-left: auto;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.statusBtn {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: medium;
+  color: rgb(223, 223, 223);
+  background-color: rgb(48, 48, 48);
+  border-style: none;
+  cursor: pointer;
+}
+
+.taskBtnRow {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin: 0 auto;
+  width: 70%;
+}
+
+.notesHeadingContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.taskNotesHeading {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 15px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 10px;
+}
+
+.taskNotesShowBtn {
+  background-color: rgb(170, 170, 170);
+  width: 20px;
+  text-align: center;
+  padding-top: 3px;
+  margin: 0;
+  cursor: pointer;
+  border-radius: 3px;
+  user-select: none;
+}
+
+.taskNotesHideBtn {
+  background-color: rgb(170, 170, 170);
+  width: 20px;
+  text-align: center;
+  padding-bottom: 3px;
+  margin: 0;
+  display: none;
+  cursor: pointer;
+  border-radius: 3px;
+  user-select: none;
+}
+
+.taskNotesContainer {
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  padding: 5px;
+  border: solid 1px rgb(185, 185, 185);
+  border-radius: 3px;
+  display: none;
+}
+
+.taskNotes {
+  margin: 0;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.confirmBtn {
+  border-style: none;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: rgb(36, 36, 36);
+  background-color: rgb(165, 165, 165);
+  font-size: 20px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.cancelBtn {
+  border-style: none;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: rgb(223, 223, 223);
+  background-color: rgb(48, 48, 48);
+  font-size: 20px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.taskConfirmBtn {
+  border-style: none;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: rgb(36, 36, 36);
+  background-color: rgb(165, 165, 165);
+  font-size: 20px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.taskCancelBtn {
+  border-style: none;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: rgb(223, 223, 223);
+  background-color: rgb(48, 48, 48);
+  font-size: 20px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+#newProjectNameRequired {
+  display: none;
+  color: red;
+  margin: 0;
+}
+
+#taskNameRequired {
+  display: none;
+  color: red;
+  margin: 0;
+}
+
+#updateTaskNameRequired {
+  display: none;
+  color: red;
+  margin: 0;
+}
+
+.spacing {
+  height: 10px;
+}
